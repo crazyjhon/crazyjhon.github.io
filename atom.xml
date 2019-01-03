@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>行尽江南</title>
+  
+  <subtitle>this is not a coffee cup</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2019-01-03T17:31:01.567Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>行尽江南</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我的第二篇博客</title>
+    <link href="http://yoursite.com/2019/01/04/%E7%AC%AC%E4%BA%8C%E7%AF%87/"/>
+    <id>http://yoursite.com/2019/01/04/第二篇/</id>
+    <published>2019-01-03T17:31:01.467Z</published>
+    <updated>2019-01-03T17:31:01.567Z</updated>
+    
+    <content type="html"><![CDATA[<p>研究导航修改ing…</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;研究导航修改ing…&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>我的第一篇博客</title>
+    <link href="http://yoursite.com/2019/01/04/hello-world/"/>
+    <id>http://yoursite.com/2019/01/04/hello-world/</id>
+    <published>2019-01-03T16:11:55.325Z</published>
+    <updated>2019-01-03T17:14:21.142Z</updated>
+    
+    <content type="html"><![CDATA[<p>我很不适应这么写博客，先试试吧！慢慢就习惯了</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;我很不适应这么写博客，先试试吧！慢慢就习惯了&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
