@@ -4,9 +4,9 @@
   
     
     <entry>
-      <title>我的第二篇博客</title>
-      <link href="/2019/01/04/%E7%AC%AC%E4%B8%80%E7%AF%87/"/>
-      <url>/2019/01/04/%E7%AC%AC%E4%B8%80%E7%AF%87/</url>
+      <title>研究hexo</title>
+      <link href="/2019/01/04/study/"/>
+      <url>/2019/01/04/study/</url>
       
         <content type="html"><![CDATA[<p>研究导航修改ing…</p>]]></content>
       
@@ -17,7 +17,7 @@
     
     
     <entry>
-      <title>我的第二篇博客</title>
+      <title>ajax以及后续绑定事件操作的代码位置关系，checkbox单全选联动</title>
       <link href="/2019/01/04/%E7%AC%AC%E4%BA%8C%E7%AF%87/"/>
       <url>/2019/01/04/%E7%AC%AC%E4%BA%8C%E7%AF%87/</url>
       
