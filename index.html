@@ -171,54 +171,7 @@
   <div class="meta" id="header-meta">
     
       <h2 class="title">
-          <a href="/2019/01/04/study/">
-              
-                  研究hexo
-              
-          </a>
-      </h2>
-    
-
-    
-      <time class="metatag time">
-        <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;2019年-01月-04日
-      </time>
-    
-
-    
-      
-
-    
-
-    
-
-    
-
-  </div>
-</section>
-
-    <section class="article typo">
-        <p>研究导航修改ing…</p>
-
-        
-
-        
-    </section>
-</article>
-
-        </div>
-      
-    
-      
-        <div class="post-wrapper">
-          <article class="post reveal ">
-    
-<section class="meta">
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/2019/01/04/第二篇/">
+          <a href="/2019/01/04/ajax以及后续绑定事件操作的代码位置关系，checkbox单全选联动/">
               
                   ajax以及后续绑定事件操作的代码位置关系，checkbox单全选联动
               
@@ -247,6 +200,53 @@
     <section class="article typo">
         <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//初始页面      </span></span><br><span class="line">     <span class="keyword">var</span> current_page=<span class="number">1</span>;</span><br><span class="line">     <span class="function"><span class="keyword">function</span> <span class="title">loadPageData</span>(<span class="params">page</span>)</span>&#123;</span><br><span class="line">       <span class="comment">// current_page=page;  </span></span><br><span class="line">       <span class="comment">//淡出一下</span></span><br><span class="line">       $(<span class="string">'tbody'</span>).fadeOut();            </span><br><span class="line">       $.get(<span class="string">'/admin/comments-data.php'</span>,&#123;<span class="attr">page</span>:page&#125;,<span class="function"><span class="keyword">function</span>(<span class="params">res</span>)</span>&#123;</span><br><span class="line">         **<span class="keyword">if</span>(page&gt;res[<span class="string">'total_page'</span>])&#123;</span><br><span class="line">           loadPageData(res[<span class="string">'total_page'</span>]);</span><br><span class="line">           <span class="keyword">return</span> </span><br><span class="line">         &#125;**</span><br><span class="line">         <span class="comment">//每次执行都要初始化整个分页，因为有可能ajax操作了数据，那么有些分页数据可能改变了</span></span><br><span class="line">         <span class="comment">//但是并没有刷新页面，所以这里要再次初始化，再次初始化后要设置起始页面为当前页面</span></span><br><span class="line">         <span class="comment">//而且在每次数据变化之后，上面都要判断当前页面是否超过了总页数，那么超过就调用重新获取数据后的总页数</span></span><br><span class="line">         </span><br><span class="line">         **$(<span class="string">'.pagination'</span>).twbsPagination(<span class="string">'destroy'</span>);</span><br><span class="line">         $(<span class="string">'.pagination'</span>).twbsPagination(&#123; </span><br><span class="line">             first:<span class="string">'&amp;laquo;'</span>,</span><br><span class="line">             last:<span class="string">'&amp;raquo;'</span>,</span><br><span class="line">             prev:<span class="string">'&amp;lt;'</span>,</span><br><span class="line">             next:<span class="string">'&amp;gt;'</span>,  </span><br><span class="line">             startPage: page,        </span><br><span class="line">             totalPages: res[<span class="string">'total_page'</span>],</span><br><span class="line">             visiblePages: <span class="number">5</span>,            </span><br><span class="line">             initiateStartPageClick:<span class="literal">false</span>,</span><br><span class="line">             <span class="comment">//下面这个事件初始化不执行，因为上面设置了false</span></span><br><span class="line">             onPageClick: <span class="function"><span class="keyword">function</span> (<span class="params">evt, page</span>) </span>&#123;                      </span><br><span class="line">               loadPageData(page);                       </span><br><span class="line">             &#125;           </span><br><span class="line">         &#125;);**                     </span><br><span class="line">         $(<span class="string">'tbody'</span>).html($(<span class="string">'#template'</span>).render(&#123;<span class="attr">comments</span>:res[<span class="string">'comments'</span>]&#125;)); </span><br><span class="line">         <span class="comment">//淡入</span></span><br><span class="line">         $(<span class="string">'tbody'</span>).fadeIn();</span><br><span class="line">         <span class="comment">//给current_page重新赋值，等待删除或其他事件删除后再次回到原页面</span></span><br><span class="line">         current_page=page;    </span><br><span class="line"></span><br><span class="line">          <span class="comment">//操作，删除数据      </span></span><br><span class="line">         <span class="comment">//防止由于ajax多次执行，元素多次注册绑定事件，所以每一次就取消，只绑定一次</span></span><br><span class="line">         <span class="keyword">if</span>($._data($(<span class="string">'tbody'</span>)[<span class="number">0</span>], <span class="string">"events"</span>))&#123;</span><br><span class="line">           $(<span class="string">'tbody'</span>).off();</span><br><span class="line">         &#125;</span><br><span class="line">         $(<span class="string">'tbody'</span>).on(<span class="string">'click'</span>,<span class="string">'.del'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; </span><br><span class="line">           <span class="built_in">console</span>.log(count++);</span><br><span class="line">           <span class="keyword">var</span> id=$(<span class="keyword">this</span>).data(<span class="string">'id'</span>);  </span><br><span class="line">           <span class="keyword">var</span> warning=$(<span class="string">'.info-alert'</span>);       </span><br><span class="line">          $.get(<span class="string">'/admin/comments-delete.php'</span>,&#123;<span class="attr">id</span>:id&#125;,<span class="function"><span class="keyword">function</span>(<span class="params">res</span>)</span>&#123;</span><br><span class="line">             loadPageData(current_page); </span><br><span class="line">             warning.html(res).css(<span class="string">'display'</span>,<span class="string">'block'</span>);                    </span><br><span class="line">          &#125;)     </span><br><span class="line">         &#125;)           </span><br><span class="line"></span><br><span class="line">         <span class="keyword">var</span> checkList=$(<span class="string">'.checkList'</span>);</span><br><span class="line">         <span class="keyword">var</span> checkAll=$(<span class="string">'#checkAll'</span>);</span><br><span class="line">         <span class="keyword">var</span> delAll=$(<span class="string">'#delAll'</span>);                </span><br><span class="line">         <span class="keyword">var</span> tbody=$(<span class="string">'tbody'</span>);   </span><br><span class="line">         <span class="keyword">var</span> data_need=<span class="string">''</span>;  </span><br><span class="line">         <span class="keyword">var</span> idArr=[]; </span><br><span class="line">         <span class="keyword">var</span> count=<span class="number">0</span>; </span><br><span class="line">         <span class="keyword">var</span> listLength=checkList.length;                </span><br><span class="line">         checkAll.on(<span class="string">'change'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;            </span><br><span class="line">           <span class="comment">//全选checkbox与各checkbox同步</span></span><br><span class="line">           <span class="keyword">var</span> status=$(<span class="keyword">this</span>).prop(<span class="string">'checked'</span>);               </span><br><span class="line">             checkList.prop(<span class="string">'checked'</span>,status);</span><br><span class="line">             </span><br><span class="line">           </span><br><span class="line">           <span class="keyword">if</span>(status)&#123;</span><br><span class="line">             <span class="comment">//这里数组要清空,防止下方单选后这里又添加重数据</span></span><br><span class="line">             idArr=[];</span><br><span class="line">             checkList.each(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">               <span class="keyword">var</span> id=$(<span class="keyword">this</span>).data(<span class="string">'id'</span>); </span><br><span class="line">               idArr.push(id);            </span><br><span class="line">             &#125;)                                        </span><br><span class="line">           &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">             idArr=[];</span><br><span class="line">           &#125;</span><br><span class="line">           data_need=idArr.join(<span class="string">','</span>);</span><br><span class="line">         &#125;);</span><br><span class="line">                           </span><br><span class="line">         checkList.on(<span class="string">'change'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;                  </span><br><span class="line">           <span class="keyword">var</span> status=$(<span class="keyword">this</span>).prop(<span class="string">'checked'</span>); </span><br><span class="line">           <span class="keyword">var</span> id=$(<span class="keyword">this</span>).data(<span class="string">'id'</span>);</span><br><span class="line">           <span class="comment">// console.log(length);                        </span></span><br><span class="line">           <span class="keyword">if</span>(status)&#123;            </span><br><span class="line">             idArr.push(id);                        </span><br><span class="line">           &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">             <span class="comment">//点的是谁就在数组中查找后删除</span></span><br><span class="line">             idArr.splice(idArr.indexOf(id),<span class="number">1</span>);</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="comment">//点击单个checkbox与全选checkbox的联动性               </span></span><br><span class="line">           <span class="keyword">var</span> count=<span class="number">0</span>;                  </span><br><span class="line">           checkList.each(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;                    </span><br><span class="line">             <span class="keyword">var</span> status=$(<span class="keyword">this</span>).prop(<span class="string">'checked'</span>);</span><br><span class="line">             status==<span class="literal">false</span>?count--:count++; </span><br><span class="line">             count==listLength?checkAll.prop(<span class="string">'checked'</span>,<span class="literal">true</span>):checkAll.prop(<span class="string">'checked'</span>,<span class="literal">false</span>);</span><br><span class="line">           &#125;)</span><br><span class="line">           data_need=idArr.join(<span class="string">','</span>);                                                                  </span><br><span class="line">         &#125;);         </span><br><span class="line">         <span class="comment">//这里当客户连续点击分页会有一个大bug,那就是不断出发分页的ajax之后(正常),给下面将要做的删除事件元素绑定了N+1次(点了N次)事件，这里必须解绑后重新绑定              </span></span><br><span class="line"></span><br><span class="line">         <span class="keyword">if</span>($._data(delAll[<span class="number">0</span>], <span class="string">"events"</span>))&#123;</span><br><span class="line">           delAll.off();</span><br><span class="line">         &#125;</span><br><span class="line"></span><br><span class="line">         delAll.on(<span class="string">'click'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;                      </span><br><span class="line">            <span class="comment">//数据不为空才删除</span></span><br><span class="line">           <span class="keyword">if</span>(data_need!=<span class="literal">false</span>)&#123;              </span><br><span class="line">             $.get(<span class="string">'/admin/comments-delete.php'</span>,&#123;<span class="attr">id</span>:data_need&#125;,<span class="function"><span class="keyword">function</span>(<span class="params">res</span>)</span>&#123;                         </span><br><span class="line">               loadPageData(current_page);                          </span><br><span class="line">               $(<span class="string">'.info-alert'</span>).html(res).css(<span class="string">'display'</span>,<span class="string">'block'</span>);</span><br><span class="line">             &#125;)</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="comment">//这里如果点击全部删除按钮后，就把全选checkbox按钮的状态设置不勾选状态</span></span><br><span class="line">           <span class="keyword">if</span>(checkAll.prop(<span class="string">'checked'</span>))&#123;                        </span><br><span class="line">             checkAll.prop(<span class="string">'checked'</span>,<span class="literal">false</span>);</span><br><span class="line">           &#125;</span><br><span class="line">         &#125;)</span><br><span class="line">       &#125;);       </span><br><span class="line">     &#125;</span><br><span class="line"></span><br><span class="line">     loadPageData(current_page);</span><br></pre></td></tr></table></figure>
 <p><img src="https://img-blog.csdnimg.cn/20181226215821605.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIwOTk1Mw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+
+        
+
+        
+    </section>
+</article>
+
+        </div>
+      
+    
+      
+        <div class="post-wrapper">
+          <article class="post reveal ">
+    
+<section class="meta">
+  
+  <div class="meta" id="header-meta">
+    
+      <h2 class="title">
+          <a href="/2019/01/04/study/">
+              
+                  研究hexo
+              
+          </a>
+      </h2>
+    
+
+    
+      <time class="metatag time">
+        <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;2019年-01月-04日
+      </time>
+    
+
+    
+      
+
+    
+
+    
+
+    
+
+  </div>
+</section>
+
+    <section class="article typo">
+        <p>研究导航修改ing…</p>
 
         
 
